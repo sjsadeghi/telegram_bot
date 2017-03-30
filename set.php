@@ -10,7 +10,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 $API_KEY = '369917175:AAELjpCYpUGmQ4hsNfwNH62QAPrnQTp37Sk';
 $BOT_NAME = 'EnAmuzanBot';
-$hook_url = 'http://bot-mytelegrambot.44fs.preview.openshiftapps.com/hook.php';
+$hook_url = 'https://bot-mytelegrambot.44fs.preview.openshiftapps.com/hook.php';
 try {
     $telegram = new Longman\TelegramBot\Telegram($API_KEY, $BOT_NAME);
 
