@@ -17,8 +17,9 @@ try {
     $telegram = new Longman\TelegramBot\Telegram($API_KEY, $BOT_NAME);
     $chat_id = 'sj_sadeghi';
     // Set Webhook
-    $result = $telegram->setWebhook($hook_url);
     $result = Request::sendMessage(['chat_id' => $chat_id, 'text' => 'Hi dear sajjad']);
+    echo "result of send message is : " . $result;
+    $result = $telegram->setWebhook($hook_url);
 
     if ($result->isOk()) {
         echo $result->getDescription();
