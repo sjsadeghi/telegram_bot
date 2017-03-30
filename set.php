@@ -6,6 +6,8 @@
  * Time: 1:17 PM
  */
 
+use Longman\TelegramBot\Request;
+
 require __DIR__ . '/vendor/autoload.php';
 
 $API_KEY = '369917175:AAELjpCYpUGmQ4hsNfwNH62QAPrnQTp37Sk';
@@ -13,9 +15,11 @@ $BOT_NAME = 'EnAmuzanBot';
 $hook_url = 'https://bot-mytelegrambot.44fs.preview.openshiftapps.com/hook.php';
 try {
     $telegram = new Longman\TelegramBot\Telegram($API_KEY, $BOT_NAME);
-
+    $chat_id = 'sj_sadeghi';
     // Set Webhook
     $result = $telegram->setWebhook($hook_url);
+    $result = Request::sendMessage(['chat_id' => $chat_id, 'text' => 'Hi dear sajjad']);
+
     if ($result->isOk()) {
         echo $result->getDescription();
     }
